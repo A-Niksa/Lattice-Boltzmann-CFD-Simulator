@@ -32,9 +32,9 @@ Cy = np.array([-1, -1, -1, 0, 0, 0, 1, 1, 1]) # velocity vectors in the y direct
 X, Y = np.meshgrid(range(columns), range(rows)) # cartesian grid
 
 # INITIAL CONDITIONS
-#F = np.ones((rows, columns, n_dir)) + 0.005 * np.random.randn(rows, columns, n_dir)
+F = np.ones((rows, columns, n_dir)) + 0.005 * np.random.randn(rows, columns, n_dir)
 #np.savetxt("LBM_initial_conditions.txt", F.flatten())
-F = np.loadtxt("LBM_initial_conditions.txt").reshape(rows, columns, n_dir)
+#F = np.loadtxt("LBM_initial_conditions.txt").reshape(rows, columns, n_dir)
 rho = np.sum(F, 2) # summing F values along axis = 2
 
 # DEFINING F_EXPRT
